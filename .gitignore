@@ -1,0 +1,13 @@
+# Python & Environment
+.venv/
+__pycache__/
+*.pyc
+
+# dbt (Data Build Tool)
+logs/
+target/
+dbt_packages/
+profiles.yml
+
+# Local/Misc Files
+.DS_Store
