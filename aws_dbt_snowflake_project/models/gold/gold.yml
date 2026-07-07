@@ -1,0 +1,22 @@
+version: 2
+
+models:
+  - name: obt_airbnb
+    description: "One Big Table containing denormalized bookings, listings, and host data."
+    columns:
+      - name: booking_id
+        description: "The primary key for a booking."
+        tests:
+          - unique
+          - not_null
+      - name: listing_id
+        tests:
+          - not_null
+
+  - name: dim_hosts_prep
+    description: "Ephemeral prep model for the host snapshot."
+    columns:
+      - name: host_id
+        tests:
+          - unique
+          - not_null
